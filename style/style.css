@@ -1,26 +1,37 @@
+/* GLOBAL DISPLAY AND STYLE SETTINGS */
 body {
     background-color: black;
     color: white;
-    align-content: center;
+    font-family: 'Inconsolata', monospace;
+    font-size: 20px;
 }
 
-div {
+button {
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: white;
+    padding: 20px;
     text-align: center;
-    padding-top:20px;
-    padding-bottom:20px;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
+/* GAME BOARD TABLE */
 table {
     border-collapse: collapse;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 table td {
-    padding: 1rem;
+    padding: 15px;
     border: 5px solid white;
     height: 100px;
     width: 100px;
-    font-size: 50px;
+    font-size: 70px;
     text-align: center;
     color: white;
 }
@@ -41,6 +52,68 @@ table tr td:last-child {
     border-right: 0;
 }
 
-p {
-    font-size: 20px;
+/* PAGE ELEMENTS AND LAYOUT*/
+.header1 {
+    grid-area: header1;
+    justify-self: center;
+}
+
+.header2 {
+    grid-area: header2;
+    justify-self: center;
+
+}
+
+.main {
+    grid-area: main;
+    padding: 15px;
+
+}
+
+.sidebar1 {
+    grid-area: sidebar1;
+    justify-self: end;
+}
+
+.sidebar2 {
+    grid-area: sidebar2;
+    justify-self: start;
+}
+
+.reset {
+    grid-area: reset;
+    justify-self: center;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: ". header1 ."
+        ". header2 ."
+        "sidebar1 main sidebar2"
+        ". reset .";
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 15px;
+}
+
+@media (max-width: 700px) {
+    .container {
+        display: grid;
+        grid-template-areas:
+            "header1"
+            "header2"
+            "main"
+            "reset"
+            "sidebar1"
+            "sidebar2";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar1 {
+        justify-self: center;
+    }
+
+    .sidebar2 {
+        justify-self: center;
+    }
 }
