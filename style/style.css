@@ -19,6 +19,27 @@ button {
     cursor: pointer;
 }
 
+.buttonDisplay {
+    display: none;
+}
+
+.player1 {
+    color: limegreen;
+}
+
+.player2 {
+    color: yellow;
+}
+
+.draw {
+    color: white;
+}
+
+#scorePlayer1,
+#scorePlayer2 {
+    font-size: 50px;
+}
+
 /* GAME BOARD TABLE */
 table {
     border-collapse: collapse;
@@ -55,34 +76,43 @@ table tr td:last-child {
 /* PAGE ELEMENTS AND LAYOUT*/
 .header1 {
     grid-area: header1;
-    justify-self: center;
 }
 
 .header2 {
     grid-area: header2;
-    justify-self: center;
-
 }
 
 .main {
     grid-area: main;
     padding: 15px;
-
 }
 
 .sidebar1 {
     grid-area: sidebar1;
     justify-self: end;
+    color: limegreen;
 }
 
 .sidebar2 {
     grid-area: sidebar2;
     justify-self: start;
+    color: yellow;
 }
 
 .reset {
     grid-area: reset;
     justify-self: center;
+}
+
+.header1,
+.header2,
+.reset {
+    justify-self: center;
+}
+
+.sidebar1,
+.sidebar2 {
+    text-align: center;
 }
 
 .container {
@@ -109,10 +139,7 @@ table tr td:last-child {
         grid-template-columns: 1fr;
     }
 
-    .sidebar1 {
-        justify-self: center;
-    }
-
+    .sidebar1,
     .sidebar2 {
         justify-self: center;
     }
