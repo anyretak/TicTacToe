@@ -1,8 +1,8 @@
 # TicTacToe
 Tic tac toe (vanilla Javascript)
 
-Basic two player tic tac toe game. 
-Future additions will include score keeping and possibility to play against computer at various difficulties.
+Basic two player tic tac toe game with scores. The grid can be adjusted to any size by setting the size variable (the default is 3x3).
+Future additions will include possibility to play against computer at various difficulties.
 
 ### Change log:
 (13/02)
